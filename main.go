@@ -10,6 +10,7 @@ func main() {
 	number = 50
 	var list []string
 
+	//Global loop
 	for {
 
 		var firstname, lastname string
