@@ -9,11 +9,9 @@ func main() {
 	var number, val, ch int
 	number = 50
 	var list []string
-
+	var firstname, lastname string
 	//Global loop
 	for {
-
-		var firstname, lastname string
 		fmt.Printf("Enter first name \n")
 		fmt.Scan(&firstname)
 		fmt.Printf("enter last  name \n")
