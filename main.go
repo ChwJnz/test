@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	var number, val int
+	var number, val, ch int
 	number = 50
 	var list []string
 
@@ -24,12 +24,16 @@ func main() {
 		list = append(list, firstname+" "+lastname)
 		fmt.Printf("Thank you %v %v for booking %v ticket\n", firstname, lastname, val)
 		fmt.Printf("%v remaining ticket for %v\n", number, val)
-		fmt.Printf("these are all our booking:%v  \n", list)
 		if number <= 0 {
 			fmt.Printf("all tickets are sold\n")
 			continue
-
 		}
+		fmt.Println("if you want to show the whole list press 1 ,0 to continue")
+		fmt.Scan(&ch)
+		if ch == 1 {
+			show(list)
+		}
+
 	}
 
 }
@@ -37,4 +41,7 @@ func main() {
 func cal(n int, v int) int {
 	n = n - v
 	return n
+}
+func show(list []string) {
+	fmt.Printf("these are all our booking:%v  \n", list)
 }
